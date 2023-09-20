@@ -17,11 +17,12 @@ gallery.addEventListener('click', onOpenImage)
 
 function onOpenImage(e){
     e.preventDefault();
-    console.log(e.target.nodeName);
+
     if(e.target.nodeName !== 'IMG') return;
 
     let lightbox = new SimpleLightbox('.gallery a', {
         captionsData: 'alt',
         captionDelay: 250,
      });
+
 }
