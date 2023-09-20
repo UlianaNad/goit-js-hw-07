@@ -13,16 +13,9 @@ const imageHtml = galleryItems.map((img) => {
 
 gallery.insertAdjacentHTML("afterBegin", imageHtml);
 
-gallery.addEventListener('click', onOpenImage)
 
-function onOpenImage(e){
-    e.preventDefault();
+new SimpleLightbox('.gallery a', {
+    captionsData: 'alt',
+    captionDelay: 250,
+ });
 
-    if(e.target.nodeName !== 'IMG') return;
-
-    let lightbox = new SimpleLightbox('.gallery a', {
-        captionsData: 'alt',
-        captionDelay: 250,
-     });
-
-}
